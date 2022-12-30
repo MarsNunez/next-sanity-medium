@@ -2,27 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
-  return ( 
-    <header className="flex justify-between p-5 max-w-7xl mx-auto">
-      <div className="flex space-x-5">
-        <Link href='/'>
-          <img className="w-44 object-contain cursor-pointer" 
-            src="https://links.papareact.com/yvf" 
-            alt="logo" 
-          />
-        </Link>
-        <div className="hidden md:inline-flex items-center space-x-5">
-          <h3>About</h3>
-          <h3>Contact</h3>
-          <h3 className="text-white bg-green-600 px-4 py-1 rounded-full">Follow</h3>
+  return (
+    <header>
+      <Link href={"/"}>
+        <div className="flex justify-between p-5 max-w-7xl mx-auto cursor-pointer">
+          <div className="font-duneRise uppercase font-extrabold flex items-center text-2xl gap-3">
+            <img
+              src="/img/mars.png"
+              alt="logo image"
+              className="h-14 rounded-full"
+            />
+            <h1>The Mars Logbook</h1>
+          </div>
+          <div className="border flex items-center h-fit my-auto px-5 py-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-md cursor-pointer md:hover:scale-110 ease-out duration-100 text-white">
+            <Link href={"/about"}>About</Link>
+          </div>
         </div>
-      </div>
-      <div className="flex items-center space-x-5 text-green-600">
-        <h3>Sign In</h3>
-        <h3 className="border border-green-600 px-4 py-1 rounded-full">Get Started</h3>
-      </div>
+      </Link>
     </header>
-   );
-}
- 
+  );
+};
+
 export default Header;

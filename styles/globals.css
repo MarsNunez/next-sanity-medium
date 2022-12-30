@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "DUNERISE";
+  src: url("../public/fonts/Dune_Rise.otf");
+}

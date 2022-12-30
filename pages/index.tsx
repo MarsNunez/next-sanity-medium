@@ -21,13 +21,12 @@ export default function Home({ posts }: Props) {
 
       <Header />
 
-      <div className="flex items-center justify-between bg-yellow-400 border-y border-black py-10 lg:py-0">
-        <div className="px-10 space-y-5">
+      <div className="flex gap-10 items-center justify-between bg-yellow-400 border-y border-black py-10 px-5 lg:px-16 lg:py-10">
+        <div className="space-y-5">
           <h1 className="text-6xl max-w-xl font-serif">
-            <span className="underline decoration-black decoration-4">
-              Medium
-            </span>{" "}
-            is a place to write, read and connect
+            If <span className="underline decoration-2">things</span> are one
+            way, it doesn't mean they can't be{" "}
+            <span className="underline decoration-2">changed</span>.
           </h1>
           <h2>
             It's easy and free to post your thinking on any topic and connect
@@ -35,8 +34,8 @@ export default function Home({ posts }: Props) {
           </h2>
         </div>
         <img
-          className="hidden md:inline-flex h-32 lg:h-full"
-          src="https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png"
+          className="hidden md:inline-flex h-72"
+          src="img/logo.png"
           alt="logo"
         />
       </div>
