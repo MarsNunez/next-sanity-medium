@@ -5,18 +5,20 @@ const Header = () => {
   return (
     <header>
       <Link href={"/"}>
-        <div className="flex justify-between p-5 max-w-7xl mx-auto cursor-pointer">
-          <div className="font-duneRise uppercase font-extrabold flex items-center text-2xl gap-3">
+        <div className="sm:flex justify-between p-5 max-w-7xl mx-auto cursor-pointer">
+          <div className="w-fit mx-auto sm:mx-0 mb-3 sm:mb-0 font-duneRise uppercase font-extrabold flex items-center text-base sm:text-2xl md:gap-3 ">
             <img
               src="/img/mars.png"
               alt="logo image"
-              className="h-14 rounded-full"
+              className="h-10 sm:h-14 rounded-full"
             />
-            <h1>The Mars Logbook</h1>
+            <h1 className="">The Mars Logbook</h1>
           </div>
-          <div className="border flex items-center h-fit my-auto px-5 py-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-md cursor-pointer md:hover:scale-110 ease-out duration-100 text-white">
-            <Link href={"/about"}>About</Link>
-          </div>
+          <Link href={"/about"}>
+            <div className="text-sm sm:text-base border sm:flex h-fit text-center px-5 py-2 sm:py-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-md cursor-pointer md:hover:scale-110 ease-out duration-100 text-white">
+              About
+            </div>
+          </Link>
         </div>
       </Link>
     </header>
