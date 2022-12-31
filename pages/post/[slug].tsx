@@ -12,7 +12,7 @@ interface Props {
 function Post({ post }: Props) {
   return (
     <>
-      <main>
+      <main className="mb-6">
         <Header />
 
         <img
@@ -23,7 +23,7 @@ function Post({ post }: Props) {
 
         <article className="max-w-3xl mx-auto p-5 pt-1 sm:pt-5">
           <h1 className="text-3xl mt-10 mb-3">{post.title}</h1>
-          <h2 className="text-xl font-light text-gray-500">
+          <h2 className="text-xl font-normal text-gray-500">
             {post.description}
           </h2>
           <div className="flex items-center space-x-3 mt-3">
@@ -32,7 +32,7 @@ function Post({ post }: Props) {
               src={builder.image(post.author.image).url()}
               alt="author-image"
             />
-            <p className="font-extralight text-sm">
+            <p className="font-normal text-sm">
               Blog post by{" "}
               <span className="text-green-600">{post.author.name}</span> -
               Published at {new Date(post._createdAt).toLocaleString()}
@@ -69,7 +69,7 @@ function Post({ post }: Props) {
                   src={builder.image(post.fimage.asset).url()}
                   alt="author-image"
                 />
-                <p className=" mt-2 font-extralight text-sm text-gray-500">
+                <p className=" mt-2 font-extralight font-serif text-sm text-gray-500">
                   {post.fdescription}
                 </p>
               </div>
